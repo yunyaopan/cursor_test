@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { supabase } from '@/lib/supabase';
 import { useNotification } from './useNotification';
 
@@ -15,7 +15,7 @@ export const useApiKeys = () => {
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([]);
   const { showSuccess, showError } = useNotification();
 
-  const fetchApiKeys = async () => {
+  const fetchApiKeys = useCallback(async () => {
     const { data, error } = await supabase
       .from('api_keys')
       .select('*')
@@ -27,7 +27,7 @@ export const useApiKeys = () => {
     }
 
     setApiKeys(data || []);
-  };
+  }, []);
 
   const createApiKey = async (name: string) => {
     const newKey = `tvly-${Math.random().toString(36).substring(2)}${Math.random().toString(36).substring(2)}`;

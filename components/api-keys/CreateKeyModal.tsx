@@ -35,7 +35,7 @@ export function CreateKeyModal({ isOpen, onClose, onCreate }: CreateKeyModalProp
               <div className="space-y-4">
                 <div>
                   <label htmlFor="keyName" className="block text-sm font-medium mb-1">
-                    Key Name — A unique name to identify this key
+                    Key Name &mdash; A unique name to identify this key
                   </label>
                   <input
                     id="keyName"

@@ -18,7 +18,7 @@ export default function ApiKeysManager() {
 
   useEffect(() => {
     fetchApiKeys();
-  }, []);
+  }, [fetchApiKeys]);
 
   const handleCreate = async (name: string) => {
     const success = await createApiKey(name);
