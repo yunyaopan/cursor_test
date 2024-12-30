@@ -57,7 +57,7 @@ export function CreateKeyModal({ isOpen, onClose, onCreate }: CreateKeyModalProp
                     className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                   />
                   <p className="text-xs text-gray-500 mt-2">
-                    *If the combined usage of all your keys exceeds your plan's limit, all requests will be rejected.
+                    *If the combined usage of all your keys exceeds your plan&apos;s limit, all requests will be rejected.
                   </p>
                 </div>
               </div>
